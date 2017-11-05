@@ -63,13 +63,8 @@ app.on('activate', function () {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
-// var nedb = require('nedb');
-
-// const filename = path.join(app.getPath('documents'), 'test.db');
-// console.log('Using persistant database located at ' + filename);
-// const db = new nedb({
-//   filename: filename,
-//   autoload: true,
-//   timestampData: true
-// });
-
+const NedbServer = require("./nedb.server");
+const dbServer = new NedbServer(
+  path.join(app.getPath('documents'), 'test.db'),
+  ipcMain);
+dbServer.listen();
