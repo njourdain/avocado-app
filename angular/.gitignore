@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+/avocado-darwin-x64
 
 # dependencies
 /node_modules
