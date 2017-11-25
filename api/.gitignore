@@ -1,5 +1,8 @@
 .DS_Store
 
+# Compiled javascript
+*.js
+
 # Logs
 logs
 *.log
